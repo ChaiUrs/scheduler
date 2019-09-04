@@ -11,7 +11,7 @@ export default function Appointment(props) {
   return (
     <article className="appointment">
       <Header key={id} time={time} />
-      {props.interview ? <Show student={interview.student} interviewer={interview.interviewer} /> : <Empty />}
+      {props.interview ? (<Show student={interview.student} interviewer={interview.interviewer} />) : (<Empty />)}
     </article>
   );
 }

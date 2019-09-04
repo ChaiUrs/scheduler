@@ -166,7 +166,7 @@ storiesOf("Appointment", module)
   </Fragment>
 ))
 
-// .add("Appointment with Time", () => <Appointment time="12pm" />)
+.add("Appointment with Time", () => <Appointment time="12pm" />)
 
 .add("Header", () => <Header time="12pm" />)
 

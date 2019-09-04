@@ -1,7 +1,7 @@
 
 import React from "react";
 
-export default function show(props) {
+export default function Show(props) {
   return (
     <main className="appointment__card appointment__card--show" data-testid="show">
       <section className="appointment__card-left">
