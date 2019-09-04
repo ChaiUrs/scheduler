@@ -1,6 +1,5 @@
 
 export function getAppointmentsForDay(state, day) {
-
   const appointmentsThisDay = state.days.find(weekday => weekday.name === day);
   if (appointmentsThisDay === undefined) {
     return [];
