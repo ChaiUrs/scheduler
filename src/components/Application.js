@@ -51,7 +51,7 @@ export default function Application(props) {
 				[id]: appointment
 			};
 			return axios
-				.put("/api/appointments/" + id, { interview })
+				.put(`/api/appointments/${id}`, { interview })
 				.then(response => {
 					setState({ ...state, appointments });
 				});
@@ -66,7 +66,7 @@ export default function Application(props) {
 				...state.appointments,
 				[id]: appointment
 			};
-			return axios.delete("/api/appointments/" + id).then(response => {
+			return axios.delete(`/api/appointments/${id}`).then(response => {
 				setState({ ...state, appointments });
 			});
 		}
