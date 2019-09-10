@@ -105,7 +105,6 @@ describe("Appointment", () => {
 		axios.put.mockRejectedValueOnce();
 		const { container } = render(<Application />);
 		await waitForElement(() => getByText(container, "Archie Cohen"));
-		//const appointments = getAllByTestId(container, "appointment");
 		const appointments = getAllByTestId(container, "appointment");
 		const appointment = appointments[0];
 		fireEvent.click(getByAltText(appointment, "Edit"));
