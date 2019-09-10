@@ -11,7 +11,8 @@ import {
 	getByPlaceholderText,
 	getByAltText,
 	queryByText,
-	queryByAltText
+	queryByAltText,
+	prettyDOM
 } from "@testing-library/react";
 
 afterEach(cleanup);
