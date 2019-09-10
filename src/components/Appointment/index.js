@@ -34,11 +34,11 @@ export default function Appointment(props) {
 		props
 			.bookInterview(props.id, interview)
 			.then(() => transition(SHOW))
-			.catch(error => transition(ERROR_SAVE, true));
+			.catch(error => transition(ERROR_SAVE));
 	}
 
 	function destroy() {
-		transition(DELETING, true);
+		transition(DELETING);
 		props
 			.cancelInterview(props.id)
 			.then(() => transition(EMPTY))
@@ -46,8 +46,8 @@ export default function Appointment(props) {
 	}
 
 	return (
-		<article className="appointment">
-			<Header time={props.time}></Header>
+		<article className="appointment" data-testid="appointment">
+			<Header time={props.time} />
 			{mode === EMPTY && <Empty onAdd={() => transition(CREATE)} />}
 			{mode === SHOW && (
 				<Show
@@ -58,11 +58,7 @@ export default function Appointment(props) {
 				/>
 			)}
 			{mode === CREATE && (
-				<Form
-					interviewers={props.interviewers}
-					onSave={save}
-					onCancel={() => back()}
-				/>
+				<Form interviewers={props.interviewers} onSave={save} onCancel={back} />
 			)}
 			{mode === EDIT && (
 				<Form
@@ -70,7 +66,7 @@ export default function Appointment(props) {
 					interviewer={props.interview.interviewer.id}
 					interviewers={props.interviewers}
 					onSave={save}
-					onCancel={() => back()}
+					onCancel={back}
 				/>
 			)}
 			{mode === SAVING && <Status message="Saving" />}
@@ -78,21 +74,15 @@ export default function Appointment(props) {
 			{mode === CONFIRM && (
 				<Confirm
 					message="ARE YOU SURE YOU WANT TO DELETE THE APPOINTMENT?"
-					onCancel={() => back()}
+					onCancel={back}
 					onConfirm={destroy}
 				/>
 			)}
 			{mode === ERROR_SAVE && (
-				<Error
-					message="COULD NOT SAVE THE APPOINTMENT."
-					onClose={() => back()}
-				/>
+				<Error message="COULD NOT BOOK THE APPOINTMENT." onClose={back} />
 			)}
 			{mode === ERROR_DELETE && (
-				<Error
-					message="COULD NOT CANCEL THE APPOINTMENT."
-					onClose={() => back()}
-				/>
+				<Error message="COULD NOT CANCEL THE APPOINTMENT." onClose={back} />
 			)}
 		</article>
 	);
