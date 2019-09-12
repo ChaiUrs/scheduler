@@ -6,8 +6,14 @@ The project has been tested through Jest.
 1. Users can see all the interview appointments of different people and can choose the day and time slot they prefer. 
 ![initialPage](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/1.%20all_schedules.png)
 
-2. Users can book appointment by clicking add button. Then enter student name and choose interviewer they prefer.
+2. Users can book/save interviews with their name and interviewer.
 ![bookAppointment](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/3.%20book_appointment.png)
+
+3. Users can also delete their interviews with a warning message to make sure they don't misclick something. 
+![deleteInterview](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/4.%20delete_appointment.png)
+
+4. 
+
 
 ## Dependencies
 - axios
