@@ -12,7 +12,8 @@ The project has been tested through Jest.
 3. Users can also delete their interviews with a warning message to make sure they don't misclick something. 
 ![deleteInterview](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/4.%20delete_appointment.png)
 
-4. 
+4. Interviews are booked through 12pm-5pm and no spots are remaining for that particular day.
+![no spots remaining](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/5.%20all_spots_booked.png)
 
 
 ## Dependencies
