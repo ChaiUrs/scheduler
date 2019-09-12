@@ -6,15 +6,20 @@ The project has been tested through Jest.
 1. Users can see all the interview appointments of different people and can choose the day and time slot they prefer. 
 ![initialPage](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/1.%20all_schedules.png)
 
-2. Users can book/save interviews with their name and interviewer.
+2. Users can save interviews with their name and interviewer and the expected day updates the number of spots available when an interview is booked.
 ![bookAppointment](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/3.%20book_appointment.png)
 
-3. Users can also delete their interviews with a warning message to make sure they don't misclick something. 
+3. A user is presented with a confirmation/warning message when they attempt to cancel an interview and the expected day updates the number of spots available when an interview is deleted.
 ![deleteInterview](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/4.%20delete_appointment.png)
 
 4. Interviews are booked through 12pm-5pm and no spots are remaining for that particular day.
 ![no spots remaining](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/5.%20all_spots_booked.png)
 
+5. A user is shown an error if an interview cannot be saved.
+![errorSave](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/6.error_save.png)
+
+6. A user is shown an error if an interview cannot be deleted.
+![errorDelete](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/7.%20error_delete.png)
 
 ## Dependencies
 - axios
