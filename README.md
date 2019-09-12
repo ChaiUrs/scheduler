@@ -3,7 +3,7 @@ Interview Scheduler is a full stack application where users can book or update t
 The project has been tested through Jest.
 
 ## Product screenshots
-1. Users can see all the interviews of different people and can choose the day and time spot they prefer. 
+1. Users can see all the interview appointments of different people and can choose the day and time slot they prefer. 
 ![initialPage](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/1.%20all_schedules.png)
 
 ## Dependencies
