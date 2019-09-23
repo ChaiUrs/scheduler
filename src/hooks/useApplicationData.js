@@ -24,11 +24,12 @@ export default function useApplicationData(props) {
 			axios.get("/api/interviewers")
 		])
 			.then(all => {
+				const [days, appointments, interviewers] = all;
 				dispatch({
 					type: SET_APPLICATION_DATA,
-					days: all[0].data,
-					appointments: all[1].data,
-					interviewers: all[2].data
+					days: days.data,
+					appointments: appointments.data,
+					interviewers: interviewers.data
 				});
 			})
 			.catch(error => console.log(error));
@@ -37,15 +38,19 @@ export default function useApplicationData(props) {
 	function bookInterview(id, interview) {
 		const url = `/api/appointments/${id}`;
 		const data = { interview };
-		return axios.put(url, data).then(() => {
-			dispatch({ type: SET_INTERVIEW, id, interview });
-		});
+		if (!interview.student || !interview.interviewer) {
+			return Promise.reject("Student Name & Interviewer cannot be blank");
+		} else {
+			return axios
+				.put(url, data)
+				.then(() => dispatch({ type: SET_INTERVIEW, id, interview }));
+		}
 	}
 
 	function cancelInterview(id) {
 		const url = `/api/appointments/${id}`;
 		const data = null;
-		return axios.delete(url, data).then(() => {
+		return axios.delete(url).then(() => {
 			dispatch({ type: SET_INTERVIEW, id, interview: data });
 		});
 	}
