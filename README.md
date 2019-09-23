@@ -1,6 +1,42 @@
 # Interview Scheduler
 Interview Scheduler is a full stack application where users can book or update their interviwes with different interviewers. 
-The project has been tested through Jest.
+The project has been tested through Jest and Cypress.
+
+## Dependencies
+- axios
+- classnames
+- normalize.css
+- react-hooks-testing-library
+- react-scripts
+- react-test-renderer
+
+## Setup
+
+Install dependencies with `npm install`.
+ * make sure PORT 8000 and 8001 is clear.
+
+Fork and clone the [scheduler-api](https://github.com/lighthouse-labs/scheduler-api) into a new directory 
+(NOT within our current scheduler directory) and follow the README.md instructions to configure and run the API server. 
+  * Open two terminals and `npm start` both scheduler-api and scheduler simultaneously in order for the app to work properly.
+
+
+## Running Webpack Development Server
+
+```sh
+npm start
+```
+
+## Running Jest Test Framework
+
+```sh
+npm test
+```
+
+## Running Storybook Visual Testbed
+
+```sh
+npm run storybook
+```
 
 ## Product screenshots
 1. Users can see all the interview appointments of different people and can choose the day and time slot they prefer.
@@ -26,33 +62,3 @@ The project has been tested through Jest.
 6. A user is shown an error if an interview cannot be deleted.
 
 ![errorDelete](https://github.com/ChaiUrs/scheduler/blob/master/screenshots/7.%20error_delete.png)
-
-## Dependencies
-- axios
-- classnames
-- normalize.css
-- react-hooks-testing-library
-- react-scripts
-- react-test-renderer
-
-## Setup
-
-Install dependencies with `npm install`.
-
-## Running Webpack Development Server
-
-```sh
-npm start
-```
-
-## Running Jest Test Framework
-
-```sh
-npm test
-```
-
-## Running Storybook Visual Testbed
-
-```sh
-npm run storybook
-```
