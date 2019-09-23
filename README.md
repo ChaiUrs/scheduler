@@ -18,6 +18,7 @@ Install dependencies with `npm install`.
 Fork and clone the [scheduler-api](https://github.com/lighthouse-labs/scheduler-api) into a new directory 
 (NOT within our current scheduler directory) and follow the README.md instructions to configure and run the API server. 
   * Open two terminals and `npm start` both scheduler-api and scheduler simultaneously in order for the app to work properly.
+  * To run in error mode => within the scheduler-api `npm run error`
 
 
 ## Running Webpack Development Server
